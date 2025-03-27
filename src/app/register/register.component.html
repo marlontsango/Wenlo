@@ -1,0 +1,122 @@
+<body class="font-inter font-feature-default antialiased">
+  <div class="mt-1 grid gap-4 h-screen lg:grid-cols-2 md:grid-cols-1">
+    <app-login-side-menu></app-login-side-menu>
+    <div class="pt-28">
+      <div class="flex  justify-around">
+          <div class="inline-block items-center justify-center">
+            <img class="h-auto" src="assets/images/wenlo.png" alt="uomo" />
+            <span class="pt-4 text-sm"> Welcome to Wenlo 👋 </span>
+          </div>
+
+      </div>
+      <div class="mt-10 grid m-8 grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+  
+          <div class="sm:col-span-3">
+              <label for="first-name" class="block text-sm/6 font-medium">First name</label>
+              <div class="mt-2">
+                <input
+                  type="text"
+                  placeholder="Enter your first name"
+                  name="first-name"
+                  id="first-name"
+                  autocomplete="given-name"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+            <div class="sm:col-span-3">
+              <label for="last-name" class="block text-sm/6 font-medium">Last name</label>
+              <div class="mt-2">
+                <input
+                  type="text"
+                  placeholder="Enter your last name"
+                  name="last-name"
+                  id="last-name"
+                  autocomplete="family-name"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+            <div class="sm:col-span-6">
+              <label for="email" class="block text-sm/6 font-medium">Email address</label>
+              <div class="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+            
+            <div class="sm:col-span-3">
+              <label for="first-name" class="block text-sm/6 font-medium"
+                >New password</label
+              >
+              <div class="flex mt-2 flex-row-reverse">
+                <span
+                  class="inline-flex items-center px-3 text-sm border rounded-s-0 border-s-0 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
+                >
+                  <i color="#93949A" width="14px" height="14px" data-feather="eye"></i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Enter your new password"
+                  name="first-name"
+                  id="first-name"
+                  autocomplete="given-name"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+            <div class="sm:col-span-3">
+              <label for="last-name" class="block text-sm/6 font-medium"
+                >Confirm password</label
+              >
+              <div class="mt-2 flex flex-row-reverse">
+                <span
+                  class="inline-flex items-center px-3 text-sm border rounded-s-0 border-s-0 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
+                >
+                  <i color="#93949A" width="14px" height="14px" data-feather="eye"></i>
+                </span>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Confirm your new password"
+                  autocomplete="family-name"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+            <div class="sm:col-span-3 text-justify text-sm font-normal mt-2 text-gray-400">
+              One capital letter required, one special character required, one number
+              required <span class="text-red-500">*</span>
+            </div>
+            
+      </div>
+  
+      <div class="flex mt-10 justify-around">
+          <button
+          (click)="register()"
+          type="button"
+          class="text-white bg-custom-tertiary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3.5 w-[200px] h-8 py-2.5 flex justify-around items-center dark:bg-custom-tertiary dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        >
+          Next
+        </button>
+      </div>
+  
+  </div>
+  </div>
+
+</body>
+
+
+
+
+
+
+
+
+

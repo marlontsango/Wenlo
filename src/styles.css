@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input, select{
+    border: solid 1px;
+    border-color: #EBEBEB;
+    color: #26283F;
+}
+label{
+    font-size: 14px;
+    letter-spacing: -0.41px;
+    color: #939393;
+}
