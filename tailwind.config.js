@@ -1,0 +1,26 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,ts}"],
+  theme: {
+    extend: {
+      colors:{
+        background: "rgba(255, 255, 255, 1)",
+        "custom-primary":"rgba(57, 73, 161, 1)",
+        "custom-secondary":"#939393",
+        "custom-pink-transparent":"rgba(224, 81, 99, 0.1)",
+        "custom-pink":"#E05163",
+        "custom-red":"#3949A1",
+        "custom-text":"rgba(19, 34, 57, 1)",
+        "custom-title-color":"rgba(38, 40, 63, 1)",
+        "custom-circle-color-one":"rgba(57, 73, 161, 1)",
+        "custom-circle-color-two":"rgba(57, 161, 145, 1)",
+        "custom-mix":"rgba(156, 186, 204, 1)",
+        "custom-transparent":"rgba(242, 245, 249, 1)",
+        "custom-body":"rgba(242, 245, 249, 1)"
+
+      }
+    },
+  },
+  plugins: [require('tailwindcss-font-inter')]
+}
+

@@ -1,0 +1,75 @@
+<nav
+  x-data="{menuToggle: false}"
+  class="sticky top-0 z-99999 flex w-full border-gray-200 bg-white lg:border-b dark:border-gray-800 dark:bg-gray-900"
+>
+  <div
+    class="flex grow flex-col items-center justify-between lg:flex-row lg:px-6"
+  >
+    <div
+      class="flex w-full items-center justify-between gap-2 border-b border-gray-200 px-3 py-3 sm:gap-4 lg:justify-between lg:border-b-0 lg:px-0 lg:py-4 dark:border-gray-800"
+    >
+      <span class="self-center text-xl mb-4 font-normal whitespace-nowrap">
+        Welcome back, Gabriela
+      </span>
+      <div class="flex items-center space-x-4 rtl:space-x-reverse">
+        <span
+          class="h-8 w-8 flex justify-items-center p-2 rounded-full bg-custom-transparent"
+        >
+          <i
+            data-feather="search"
+            color="rgba(59, 81, 161, 1)"
+            width="20px"
+            height="20px"
+          >
+          </i>
+        </span>
+        <span
+          class="h-8 w-8 flex justify-items-center p-2 rounded-full bg-custom-transparent"
+        >
+          <i
+            data-feather="bell"
+            color="rgba(59, 81, 161, 1)"
+            width="20px"
+            height="20px"
+          >
+          </i>
+        </span>
+
+        <div class="header-element flex relative justify-items-center right-0">
+          <button
+            id="droptown-profile"
+            type="button"
+            class="hs-dropdown-toggle ti-dropdown-toggle !gap-2 !p-0 flex-shrink-0 sm:me-2 me-0 !rounded-full !shadow-none text-xs align-middle !border-0 !shadow-transparent"
+          >
+            <img
+              class="inline-block rounded-full"
+              width="32"
+              height="32"
+              alt="Image description"
+              src="assets/images/Astronaut.svg"
+            />
+          </button>
+          <div class="md:block dropdown-profile">
+            <p class="font-medium mb-1 leading-none text-gray-400 text-sm">
+              Kasper Marlon
+            </p>
+            <span
+              class="opacity-[0.7] font-bold text-custom-text block text-lg"
+            >
+              Prenium plan
+            </span>
+          </div>
+          <button class="mx-2">
+            <i
+              data-feather="chevron-down"
+              color="#26283F"
+              width="20px"
+              height="20px"
+            >
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
