@@ -18,9 +18,10 @@ const routes: Routes = [
   { path: 'new-password', component: NewPasswordComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'onboarding', component: UserOnboardingComponent },
+  { path: 'notFound', component: PageNotFoundComponentComponent },
   { path: 'choose-payment', component: ChoosePaymentMethodComponent },
   { path: 'pricing', component: PricingPlanComponent },
-  { path: '**', component: PageNotFoundComponentComponent }
+  { path: '**', component: PageNotFoundComponentComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

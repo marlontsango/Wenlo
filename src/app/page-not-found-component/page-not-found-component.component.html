@@ -1,1 +1,99 @@
-<p>page-not-found-component works!</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<!-- <div
+  x-show="loaded"
+  x-init="window.addEventListener('DOMContentLoaded', () => {setTimeout(() => loaded = false, 500)})"
+  class="fixed left-0 top-0 z-999999 flex h-screen w-screen items-center justify-center bg-white dark:bg-black"
+>
+  <div
+    class="h-16 w-16 animate-spin rounded-full border-4 border-solid border-brand-500 border-t-transparent"
+  ></div>
+</div> -->
+<div class="flex h-screen overflow-hidden">
+  <!-- ===== Preloader Start ===== -->
+  <!-- ===== Preloader End ===== -->
+
+  <!-- ===== Sidebar Start ===== -->
+  <app-side-bar></app-side-bar>
+  <!-- ===== Sidebar End ===== -->
+
+  <!-- ===== Page Wrapper Start ===== -->
+  <div class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
+    <!-- Small Device Overlay Start -->
+    <!-- Small Device Overlay End -->
+
+    <!-- ===== Header Start ===== -->
+    <app-nav-bar></app-nav-bar>
+    <!-- ===== Header End ===== -->
+  </div>
+</div>
+
+<!-- <nav class="flex relative p-6 lg:left-64 border-b lg:w-[calc(100%-16rem)]" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+    <li class="inline-flex items-center">
+      <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+        Wenlo
+      </a>
+    </li>
+    <li aria-current="page">
+      <div class="flex items-center">
+        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Dashboard</span>
+      </div>
+    </li>
+  </ol>
+</nav>
+<div class="relative p-6 lg:left-64 lg:w-[calc(100%-16rem)]">
+  <h1 class="py-6 font-normal text-custom-text text-2xl">My Dashboard</h1>
+
+  <div class="grid grid-cols-2 gap-3">
+    <div class="gird grid-cols-1 max-w-full  h-[632px] bg-white border border-gray-300">
+      <div class="flex justify-between border-b mx-2 items-center  p-4 justify-items-center">
+        <div class="font-bold text-3xl text-custom-text">
+          $3000<span class="text-sm font-normal text-gray-400 pt-2 ml-2"> this month</span>
+        </div>
+        <div class="block">
+          <div class="font-bold text-md text-custom-text">$3000 <span class="text-sm font-normal text-gray-400">/$5000</span></div>
+          <div class="text-sm text-gray-300">
+            Monthly top-up limit
+          </div>
+        </div>
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+
+    </div>
+    <div class="grid bg-white max-w-full  h-[632px] border border-gray-300">
+      <div class="flex">
+        <div>
+          <span class="text-sm text-gray-400 mb-2">Life time top-up</span>
+          <h5 class="font-bold text-md text-custom-text">$3000</h5>
+        </div>
+        <div>
+          <span class="text-sm text-gray-400 mb-2">Ad account</span>
+          <h5 class="font-bold text-md text-custom-text">$3000</h5>
+        </div>
+        <div>
+          <span class="text-sm text-gray-400 mb-2">Balance</span>
+          <h5 class="font-bold text-md text-custom-text">$23000</h5>
+        </div>
+
+      </div>
+      <div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div> -->

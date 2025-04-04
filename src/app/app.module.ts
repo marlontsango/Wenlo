@@ -1,4 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,9 @@ import { ToggleButton } from 'primeng/togglebutton';
 import { IconField } from 'primeng/iconfield';
 import { InputIcon } from 'primeng/inputicon';
 import { CommonModule } from '@angular/common';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,9 @@ import { CommonModule } from '@angular/common';
     ChoosePaymentMethodComponent,
     PricingPlanComponent,
     PageNotFoundComponentComponent,
-    LoginSideMenuComponent
+    LoginSideMenuComponent,
+    NavBarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
