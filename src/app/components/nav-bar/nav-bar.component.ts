@@ -9,8 +9,10 @@ import * as feather from 'feather-icons';
 })
 export class NavBarComponent {
   sidebarToggle: boolean;
+  menuToggle: boolean;
   constructor(){
     this.sidebarToggle = false;
+    this.menuToggle = false;
     feather.replace();
 
   }

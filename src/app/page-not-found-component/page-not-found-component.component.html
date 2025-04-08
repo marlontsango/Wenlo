@@ -17,83 +17,103 @@
   <!-- ===== Preloader End ===== -->
 
   <!-- ===== Sidebar Start ===== -->
-  <app-side-bar></app-side-bar>
+  <app-side-bar class="bg-white"></app-side-bar>
   <!-- ===== Sidebar End ===== -->
 
   <!-- ===== Page Wrapper Start ===== -->
   <div class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
     <!-- Small Device Overlay Start -->
     <!-- Small Device Overlay End -->
-
     <!-- ===== Header Start ===== -->
     <app-nav-bar></app-nav-bar>
     <!-- ===== Header End ===== -->
+
+    <main>
+      <div class="p-4 mx-auto max-2xl: md:p-6">
+        <div class="grid grid-cols-12  gap-4 md:gap-6">
+          <div class="col-span-12 space-y-6 xl:col-span-7">
+            <div
+            class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6"
+            >
+            <div class="flex justify-between border-b border-gray-200 pb-2">
+              <h2 class="text-custom-title-color text-xl font-bold">
+                $3000                
+                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">This month</span>
+              </h2>
+              <div class="grid my-1">
+                <span class="flex text-sm text-gray-500"><h4 class="text-md text-custom-primary">$3000</h4>/$5000</span>
+                <span class="text-gray-300 text-sm">Montly top-up limit</span>
+              </div>
+
+            </div>
+
+            <div class="max-w-full overflow-x-auto custom-scrollbar">
+              <div class="-ml-5 min-w-[650px] pl-2 xl:min-w-full">
+                <div
+                  id="chartOne"
+                  class="-ml-5 h-full min-w-[650px] pl-2 xl:min-w-full"
+                ></div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-6">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
+                Monthly Sales
+              </h3>
+          
+              <div x-data="{openDropDown: false}" class="relative h-fit">
+                <button
+                  :class="openDropDown ? 'text-gray-700 dark:text-white' : 'text-gray-400 hover:text-gray-700 dark:hover:text-white'"
+                >
+                  <svg
+                    class="fill-current"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10.2441 6C10.2441 5.0335 11.0276 4.25 11.9941 4.25H12.0041C12.9706 4.25 13.7541 5.0335 13.7541 6C13.7541 6.9665 12.9706 7.75 12.0041 7.75H11.9941C11.0276 7.75 10.2441 6.9665 10.2441 6ZM10.2441 18C10.2441 17.0335 11.0276 16.25 11.9941 16.25H12.0041C12.9706 16.25 13.7541 17.0335 13.7541 18C13.7541 18.9665 12.9706 19.75 12.0041 19.75H11.9941C11.0276 19.75 10.2441 18.9665 10.2441 18ZM11.9941 10.25C11.0276 10.25 10.2441 11.0335 10.2441 12C10.2441 12.9665 11.0276 13.75 11.9941 13.75H12.0041C12.9706 13.75 13.7541 12.9665 13.7541 12C13.7541 11.0335 12.9706 10.25 12.0041 10.25H11.9941Z"
+                      fill=""
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-show="openDropDown"
+                  class="absolute right-0 z-40 w-40 p-2 space-y-1 bg-white border border-gray-200 top-full rounded-2xl shadow-theme-lg dark:border-gray-800 dark:bg-gray-dark"
+                >
+                  <button
+                    class="flex w-full px-3 py-2 font-medium text-left text-gray-500 rounded-lg text-theme-xs hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
+                  >
+                    View More
+                  </button>
+                  <button
+                    class="flex w-full px-3 py-2 font-medium text-left text-gray-500 rounded-lg text-theme-xs hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+
+          
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
   </div>
+
 </div>
 
-<!-- <nav class="flex relative p-6 lg:left-64 border-b lg:w-[calc(100%-16rem)]" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-    <li class="inline-flex items-center">
-      <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-        Wenlo
-      </a>
-    </li>
-    <li aria-current="page">
-      <div class="flex items-center">
-        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-        </svg>
-        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Dashboard</span>
-      </div>
-    </li>
-  </ol>
-</nav>
-<div class="relative p-6 lg:left-64 lg:w-[calc(100%-16rem)]">
-  <h1 class="py-6 font-normal text-custom-text text-2xl">My Dashboard</h1>
-
-  <div class="grid grid-cols-2 gap-3">
-    <div class="gird grid-cols-1 max-w-full  h-[632px] bg-white border border-gray-300">
-      <div class="flex justify-between border-b mx-2 items-center  p-4 justify-items-center">
-        <div class="font-bold text-3xl text-custom-text">
-          $3000<span class="text-sm font-normal text-gray-400 pt-2 ml-2"> this month</span>
-        </div>
-        <div class="block">
-          <div class="font-bold text-md text-custom-text">$3000 <span class="text-sm font-normal text-gray-400">/$5000</span></div>
-          <div class="text-sm text-gray-300">
-            Monthly top-up limit
-          </div>
-        </div>
-      </div>
-      <div>
-
-      </div>
-      <div>
-
-      </div>
-
-    </div>
-    <div class="grid bg-white max-w-full  h-[632px] border border-gray-300">
-      <div class="flex">
-        <div>
-          <span class="text-sm text-gray-400 mb-2">Life time top-up</span>
-          <h5 class="font-bold text-md text-custom-text">$3000</h5>
-        </div>
-        <div>
-          <span class="text-sm text-gray-400 mb-2">Ad account</span>
-          <h5 class="font-bold text-md text-custom-text">$3000</h5>
-        </div>
-        <div>
-          <span class="text-sm text-gray-400 mb-2">Balance</span>
-          <h5 class="font-bold text-md text-custom-text">$23000</h5>
-        </div>
-
-      </div>
-      <div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div> -->
+  

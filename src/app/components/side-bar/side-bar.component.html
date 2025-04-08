@@ -1,16 +1,33 @@
+
+ <button (click)="toggleSidebar()"  data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" id="button" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+  <span class="sr-only">Open sidebar</span>
+  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+  </svg>
+</button>
+
 <aside
-  :class="sidebarToggle ? 'translate-x-0 lg:w-[90px]' : '-translate-x-full'"
-  class="sidebar fixed left-0 top-0 z-9999 flex h-screen w-[290px] flex-col overflow-y-hidden border-r border-gray-200 bg-white px-5 dark:border-gray-800 dark:bg-black lg:static lg:translate-x-0"
+  id="default-sidebar"
+  [ngClass]="sidebarToggle ? 'translate-x-0 lg:w-[90px]' : '-translate-x-full'"
+  class="sidebar fixed left-0 top-0 z-9999 flex h-full w-[290px] flex-col overflow-y-hidden border-r border-gray-200 bg-white px-5 dark:border-gray-800 dark:bg-black lg:static lg:translate-x-0 transition-transform duration-300 z-50"
 >
   <!-- SIDEBAR HEADER -->
+   <button 
+   *ngIf="sidebarToggle"
+   (click)="toggleSidebar()"
+   class="inline-flex items-center p-2 mt-2 ms-3"
+   >
+    <i data-feather="x" color="#26283F" width="20px" height="20px"> </i>
+
+   </button>
   <div
-    :class="sidebarToggle ? 'justify-center' : 'justify-between'"
+  [ngClass]="sidebarToggle ? 'justify-center' : 'justify-between'"
     class="flex items-center gap-2 pt-8 sidebar-header pb-7"
   >
     <a href="#">
       <img
         class="logo-icon"
-        :class="sidebarToggle ? 'lg:block' : 'hidden'"
+        [ngClass]="sidebarToggle ? 'lg:hidden' : 'block'"
         src="assets/images/wenlo.png"
         alt="Logo"
       />
@@ -21,7 +38,7 @@
       <p class="font-medium mb-1 leading-none text-gray-400 text-sm">
         Main balance
       </p>
-      <span class="opacity-[0.7] font-bold text-custom-text block text-lg">
+      <span class="font-bold text-custom-title-color block text-lg">
         $819232.98
       </span>
     </div>
@@ -39,7 +56,7 @@
         <h3 class="mb-4 pt-6 text-xs uppercase leading-[20px] text-gray-400">
           <span
             class="menu-group-title"
-            :class="sidebarToggle ? 'lg:hidden' : ''"
+            [ngClass]="sidebarToggle ? 'lg:hidden' : ''"
           >
             MENU
           </span>
@@ -49,7 +66,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -71,7 +88,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -98,7 +115,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -125,7 +142,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -152,7 +169,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -180,7 +197,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -208,7 +225,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -235,7 +252,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group"
             >
               <svg
                 class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -294,6 +311,7 @@
   </div>
 </aside>
 
+
 <!--  <aside 
  id="sidebar-multi-level-sidebar" 
  class="fixed top-0 bg-white border-2 p-4 left-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" 
@@ -329,7 +347,7 @@
     <div class="h-full px-3 py-4 overflow-auto ">
         <ul class="space-y-2 font-medium" >
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                    <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                       <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
                       <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
@@ -338,7 +356,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8H5m12 0a1 1 0 0 1 1 1v2.6M17 8l-4-4M5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6M5 8l4-4 4 4m6 4h-4a2 2 0 1 0 0 4h4a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1Z"/>
                     </svg>
@@ -346,7 +364,7 @@
                  </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m-2 2v-4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                     </svg>                      
@@ -354,7 +372,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z"/>
                       </svg>                                         
@@ -362,7 +380,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 10 3-3m0 0-3-3m3 3H5v3m3 4-3 3m0 0 3 3m-3-3h14v-3"/>
                     </svg>
@@ -371,7 +389,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M10 19H5a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h2m10 1a3 3 0 0 1-3 3m3-3a3 3 0 0 0-3-3m3 3h1m-4 3a3 3 0 0 1-3-3m3 3v1m-3-4a3 3 0 0 1 3-3m-3 3h-1m4-3v-1m-2.121 1.879-.707-.707m5.656 5.656-.707-.707m-4.242 0-.707.707m5.656-5.656-.707.707M12 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                       </svg>
@@ -380,7 +398,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                     </svg>                                   
@@ -389,7 +407,7 @@
             </li>
 
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-primary dark:hover:bg-gray-700 group">
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-md dark:text-white hover:bg-custom-tertiary dark:hover:bg-gray-700 group">
                     <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                     </svg>

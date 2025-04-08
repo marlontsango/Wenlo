@@ -34,12 +34,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
+              
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/components/charts/chart-01.js"
+            ]
           },
           "configurations": {
             "production": {
