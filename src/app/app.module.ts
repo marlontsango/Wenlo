@@ -27,6 +27,7 @@ import { InputIcon } from 'primeng/inputicon';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     ToggleButton,
     IconField,
     InputIcon,
-    CommonModule
+    CommonModule,
+    NgApexchartsModule
+
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
  bootstrap: [AppComponent],

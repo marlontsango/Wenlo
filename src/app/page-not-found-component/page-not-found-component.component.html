@@ -67,7 +67,10 @@
           </li>
         </ol>
       </nav>
-      <div class="p-4 mx-auto max-2xl: md:p-6">
+      <div class="px-4 md:px-6">
+        <h1 class="font-normal text-2xl text-custom-primary">My Dasboard</h1>
+      </div>
+      <div class="mx-auto max-2xl: md:p-6">
         <div class="grid grid-cols-12 gap-4 md:gap-6">
           <div class="col-span-12 space-y-6 xl:col-span-6">
             <!-- ===== Chart start ===== -->
@@ -93,11 +96,18 @@
 
               <div class="max-w-full overflow-x-auto custom-scrollbar">
                 <div class="-ml-5 min-w-[650px] pl-2 xl:min-w-full">
-                  <div
-                    #chartOne
-                    id="chartOne"
-                    class="-ml-5 h-full min-w-[650px] pl-2 xl:min-w-full"
-                  ></div>
+                  <apx-chart
+                  [series]="series"
+                  [chart]="chart"
+                  [dataLabels]="dataLabels"
+                  [markers]="markers"
+                  [title]="title"
+                  [fill]="fill"
+                  [yaxis]="yaxis"
+                  [xaxis]="xaxis"
+                  [tooltip]="tooltip"
+                  [autoUpdateSeries]="true"
+                ></apx-chart>
                 </div>
               </div>
 
@@ -126,7 +136,7 @@
 
               <div class="mt-8">
                 <div
-                class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
+                  class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
                 >
                   <h3
                     class="text-md font-medium text-custom-secondary dark:text-white/90"
@@ -165,7 +175,7 @@
                   >
                 </div>
                 <div
-                class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
+                  class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
                 >
                   <h3
                     class="text-md font-medium text-custom-secondary dark:text-white/90"
@@ -181,7 +191,7 @@
                 <div class="flex mt-10 justify-around">
                   <button
                     type="button"
-                    class="text-white bg-custom-tertiary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3.5 w-full h-10 py-2.5  items-center dark:bg-custom-tertiary dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    class="text-white bg-custom-tertiary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3.5 w-full h-10 py-2.5 items-center dark:bg-custom-tertiary dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                   >
                     See all
                   </button>
@@ -190,7 +200,7 @@
             </div>
             <!-- ===== Chart end ===== -->
           </div>
-            <!-- ===== accounts list start ===== -->
+          <!-- ===== accounts list start ===== -->
           <div class="col-span-12 space-y-6 xl:col-span-6">
             <div
               class="overflow-hidden rounded-xl border border-gray-200 bg-white px-5 p-5 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6"
@@ -270,7 +280,7 @@
               </div>
               <div>
                 <div
-                  class="flex justify-between my-2.5  justify-items-center bg-gray-50 border-2 border-gray-200 rounded-lg items-center p-2"
+                  class="flex justify-between my-2.5 justify-items-center bg-gray-50 border-2 border-gray-200 rounded-lg items-center p-2"
                 >
                   <div class="flex items-center">
                     <i
@@ -283,26 +293,28 @@
                       Twitter
                     </span>
                   </div>
-                  <div class="flex justify-between items-center w-[35%]">
+                  <div class="flex justify-between items-center">
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       Amazon
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       #127987
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
-                    <i 
-                    color="#26283F"                 
-                    width="16px"
-                    height="16px" 
-                    data-feather="external-link">
-                  </i>                    </span>
+                      <i
+                        color="#26283F"
+                        width="16px"
+                        height="16px"
+                        data-feather="external-link"
+                      >
+                      </i>
+                    </span>
                   </div>
                 </div>
                 <div
@@ -319,26 +331,28 @@
                       Twitter
                     </span>
                   </div>
-                  <div class="flex justify-between items-center w-[35%]">
+                  <div class="flex justify-between items-center">
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       Amazon
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       #127987
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
-                    <i 
-                    color="#26283F"                 
-                    width="16px"
-                    height="16px" 
-                    data-feather="external-link">
-                  </i>                    </span>
+                      <i
+                        color="#26283F"
+                        width="16px"
+                        height="16px"
+                        data-feather="external-link"
+                      >
+                      </i>
+                    </span>
                   </div>
                 </div>
                 <div
@@ -355,26 +369,28 @@
                       Twitter
                     </span>
                   </div>
-                  <div class="flex justify-between items-center w-[35%]">
+                  <div class="flex justify-between items-center">
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       Amazon
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       #127987
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
-                    <i 
-                    color="#26283F"                 
-                    width="16px"
-                    height="16px" 
-                    data-feather="external-link">
-                  </i>                    </span>
+                      <i
+                        color="#26283F"
+                        width="16px"
+                        height="16px"
+                        data-feather="external-link"
+                      >
+                      </i>
+                    </span>
                   </div>
                 </div>
                 <div
@@ -391,69 +407,72 @@
                       Twitter
                     </span>
                   </div>
-                  <div class="flex justify-between items-center w-[35%]">
+                  <div class="flex justify-between items-center">
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       Amazon
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
                       #127987
                     </span>
                     <span
-                      class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
                     >
-                    <i 
-                    color="#26283F"                 
-                    width="16px"
-                    height="16px" 
-                    data-feather="external-link">
-                  </i>                    </span>
+                      <i
+                        color="#26283F"
+                        width="16px"
+                        height="16px"
+                        data-feather="external-link"
+                      >
+                      </i>
+                    </span>
                   </div>
                 </div>
                 <div
-                class="flex my-2.5 justify-between justify-items-center bg-gray-50 border-2 border-gray-200 rounded-lg items-center p-2"
-              >
-                <div class="flex items-center">
-                  <i
-                  width="16px"
-                  height="16px"
-                  color="#26283F"
-                  data-feather="twitter"
-                ></i>
-                  <span class="font-medium text-custom-secondary ml-2">
-                    Twitter
-                  </span>
+                  class="flex my-2.5 justify-between justify-items-center bg-gray-50 border-2 border-gray-200 rounded-lg items-center p-2"
+                >
+                  <div class="flex items-center">
+                    <i
+                      width="16px"
+                      height="16px"
+                      color="#26283F"
+                      data-feather="twitter"
+                    ></i>
+                    <span class="font-medium text-custom-secondary ml-2">
+                      Twitter
+                    </span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
+                    >
+                      Amazon
+                    </span>
+                    <span
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
+                    >
+                      #127987
+                    </span>
+                    <span
+                      class="bg-gray-200 ml-2 text-custom-secondary rounded-md font-medium p-1"
+                    >
+                      <i
+                        color="#26283F"
+                        width="16px"
+                        height="16px"
+                        data-feather="external-link"
+                      >
+                      </i>
+                    </span>
+                  </div>
                 </div>
-                <div class="flex justify-between items-center w-[35%]">
-                  <span
-                    class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
-                  >
-                    Amazon
-                  </span>
-                  <span
-                    class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
-                  >
-                    #127987
-                  </span>
-                  <span
-                    class="bg-gray-200 text-custom-secondary rounded-md font-medium p-1"
-                  >
-                  <i 
-                    color="#26283F"                 
-                    width="16px"
-                    height="16px" 
-                    data-feather="external-link">
-                  </i>
-                  </span>
-                </div>
-              </div>
                 <div class="flex mt-10 justify-around">
                   <button
                     type="button"
-                    class="text-white bg-custom-tertiary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3.5 w-full h-10 py-2.5  items-center dark:bg-custom-tertiary dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    class="text-white bg-custom-tertiary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3.5 w-full h-10 py-2.5 items-center dark:bg-custom-tertiary dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                   >
                     See all
                   </button>
@@ -461,173 +480,284 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-12  gap-4 xl:col-span-12 md:col-span-12">
-            <div
-            class="rounded-xl col-span-4 md:col-span-6 xl:col-span-4 border my-5 border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
-            >
+          <!-- ===== accounts list end ===== -->
+        </div>
+
+        <!-- ===== balance recharge and account start ===== -->
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div
+            class="rounded-xl border my-5 border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
+          >
             <div class="p-5">
               <div class="grid justify-between">
                 <span class="bg-indigo-100 p-2 rounded-full flex items-center">
-                  <i
-                  color="#26283F"
-                  data-feather="book-open"
-                ></i>
+                  <i color="#26283F" data-feather="book-open"></i>
                 </span>
               </div>
               <div class="flex justify-between mt-2.5 pb-3 border-b-2">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
+                <h3
+                  class="text-lg font-semibold text-gray-800 dark:text-white/90"
+                >
                   Main Balance
                 </h3>
-                <span class="border border-custom-secondary  p-2 rounded-md">
-                  <i 
-                  color="#3949A1"                 
-                  width="15px"
-                  height="15px" 
-                  data-feather="external-link">
-                </i>
-                </span>
-              </div>
-              <div class="flex mt-4">
-                <span class="text-lg font-semibold text-gray-800">
-                  0
-                </span>
-                <span class="font-medium mt-1 ml-1 text-custom-text">
-                  Request
-                </span>
-              </div>
-              <div class=" mt-4 items-center  justify-around bg-white border rounded-md border-gray-100">
-                <div class=" grid justify-items-center items-center p-10 justify-center ">
-                  <span class="text-center text-custom-text font-normal">Under review</span>
-                  <p class="text-lg font-bold text-gray-800">2</p>
-                </div>
-
-              </div>
-            </div>
-
-            </div>
-            <div
-            class="rounded-xl my-5 col-span-4 md:col-span-6 xl:col-span-4 border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
-            >
-            <div class="p-5">
-              <div class="grid justify-between">
-                <span class="bg-indigo-100 p-2 rounded-full flex items-center">
+                <span class="border border-custom-secondary p-2 rounded-md">
                   <i
-                  color="#26283F"
-                  data-feather="book-open"
-                ></i>
-                </span>
-              </div>
-              <div class="flex justify-between mt-2.5 pb-3 border-b-2">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
-                  Ad account recharge
-                </h3>
-                <span class="border border-custom-secondary  p-2 rounded-md">
-                  <i 
-                  color="#3949A1"                 
-                  width="15px"
-                  height="15px" 
-                  data-feather="credit-card">
-                </i>
+                    color="#3949A1"
+                    width="15px"
+                    height="15px"
+                    data-feather="external-link"
+                  >
+                  </i>
                 </span>
               </div>
               <div class="flex mt-4">
-                <span class="text-lg font-semibold text-gray-800">
-                  0
-                </span>
+                <span class="text-lg font-semibold text-gray-800"> 0 </span>
                 <span class="font-medium mt-1 ml-1 text-custom-text">
                   Request
                 </span>
               </div>
               <div
-              class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
+                class="mt-4 items-center justify-around bg-white border rounded-md border-gray-100"
+              >
+                <div
+                  class="grid justify-items-center items-center p-10 justify-center"
+                >
+                  <span class="text-center text-custom-text font-normal"
+                    >Under review</span
+                  >
+                  <p class="text-lg font-bold text-gray-800">2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl my-5 border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
+          >
+            <div class="p-5">
+              <div class="grid justify-between">
+                <span class="bg-indigo-100 p-2 rounded-full flex items-center">
+                  <i color="#26283F" data-feather="book-open"></i>
+                </span>
+              </div>
+              <div class="flex justify-between mt-2.5 pb-3 border-b-2">
+                <h3
+                  class="text-lg font-semibold text-gray-800 dark:text-white/90"
+                >
+                  Ad account recharge
+                </h3>
+                <span class="border border-custom-secondary p-2 rounded-md">
+                  <i
+                    color="#3949A1"
+                    width="15px"
+                    height="15px"
+                    data-feather="credit-card"
+                  >
+                  </i>
+                </span>
+              </div>
+              <div class="flex mt-4">
+                <span class="text-lg font-semibold text-gray-800"> 0 </span>
+                <span class="font-medium mt-1 ml-1 text-custom-text">
+                  Request
+                </span>
+              </div>
+              <div
+                class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
               >
                 <h3
                   class="text-md font-medium text-custom-secondary dark:text-white/90"
                 >
                   Request approved
                 </h3>
-                <span
-                  class="text-md font-bold text-gray-700 dark:text-white/90"
+                <span class="text-md font-bold text-gray-700 dark:text-white/90"
                   >(0)</span
                 >
               </div>
               <div
-              class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
+                class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
               >
                 <h3
                   class="text-md font-medium text-custom-secondary dark:text-white/90"
                 >
                   Request Reviewed
                 </h3>
-                <span
-                  class="text-md font-bold text-gray-700 dark:text-white/90"
+                <span class="text-md font-bold text-gray-700 dark:text-white/90"
                   >(0)</span
                 >
               </div>
               <div
-              class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
+                class="flex items-center bg-gray-50 border-2 border-gray-200 rounded-lg justify-between mt-2 p-2"
               >
                 <h3
                   class="text-md font-medium text-custom-secondary dark:text-white/90"
                 >
                   Request rejected
                 </h3>
-                <span
-                  class="text-md font-bold text-gray-700 dark:text-white/90"
+                <span class="text-md font-bold text-gray-700 dark:text-white/90"
                   >(0)</span
                 >
               </div>
             </div>
-
-            </div>
-            <div
-            class="rounded-xl col-span-4 md:col-span-6 xl:col-span-4 border my-5 border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
-            >
+          </div>
+          <div
+            class="rounded-xl border my-5 border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
+          >
             <div class="p-5">
               <div class="grid justify-between">
                 <span class="bg-indigo-100 p-2 rounded-full flex items-center">
-                  <i
-                  color="#26283F"
-                  data-feather="book-open"
-                ></i>
+                  <i color="#26283F" data-feather="book-open"></i>
                 </span>
               </div>
               <div class="flex justify-between mt-2.5 pb-3 border-b-2">
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
+                <h3
+                  class="text-lg font-semibold text-gray-800 dark:text-white/90"
+                >
                   Main Balance
                 </h3>
-                <span class="border border-custom-secondary  p-2 rounded-md">
-                  <i 
-                  color="#3949A1"                 
-                  width="15px"
-                  height="15px" 
-                  data-feather="external-link">
-                </i>
+                <span class="border border-custom-secondary p-2 rounded-md">
+                  <i
+                    color="#3949A1"
+                    width="15px"
+                    height="15px"
+                    data-feather="external-link"
+                  >
+                  </i>
                 </span>
               </div>
               <div class="flex mt-4">
-                <span class="text-lg font-semibold text-gray-800">
-                  0
-                </span>
+                <span class="text-lg font-semibold text-gray-800"> 0 </span>
                 <span class="font-medium mt-1 ml-1 text-custom-text">
                   Request
                 </span>
               </div>
-              <div class=" mt-4 items-center  justify-around bg-white border rounded-md border-gray-100">
-                <div class=" grid justify-items-center items-center p-10 justify-center ">
-                  <span class="text-center text-custom-text font-normal">Under review</span>
+              <div
+                class="mt-4 items-center justify-around bg-white border rounded-md border-gray-100"
+              >
+                <div
+                  class="grid justify-items-center items-center p-10 justify-center"
+                >
+                  <span class="text-center text-custom-text font-normal"
+                    >Under review</span
+                  >
                   <p class="text-lg font-bold text-gray-800">2</p>
                 </div>
-
               </div>
             </div>
-
-            </div>
-
           </div>
+        </div>
 
-        <!-- ===== accounts list end ===== -->
+        <!-- ===== balance recharge and account end ===== -->
+        <div class="px-4 md:px-6">
+          <h1 class="font-normal text-2xl text-custom-primary">
+            Main Balance and Ad Account Recharges
+          </h1>
+        </div>
 
+        <div class="col-span-12 space-y-6 xl:col-span-6">
+          <div
+            class="rounded-xl border my-5 border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
+          >
+            <div class="flex justify-between items-center p-4">
+              <div class="flex justify-around items-center">
+                <div class="block mr-2">
+                  <span class="text-sm text-gray-400">Current balance</span>
+                  <h3 class="text-xl my-2 font-bold">$8192232.98</h3>
+                </div>
+                <div
+                  class="flex mx-2 justify-center items-center bg-green-100 p-1 text-[#2E8D0C]"
+                >
+                  <i
+                    color="#2E8D0C"
+                    width="14px"
+                    height="14px"
+                    data-feather="arrow-up"
+                  ></i>
+                  <span>4.28%</span>
+                </div>
+                <span class="font-bold text-2xl text-gray-500">.</span>
+                <div
+                  class="flex font-bold items-center text-sm justify-around border text-[#A78736] border-[#A78736] rounded-md mx-2 p-1"
+                >
+                  <span class="mx-2">
+                    <i color="#A78736" data-feather="arrow-down-circle"></i>
+                  </span>
+                  <span class="mx-2"> On pending $2398.12 </span>
+                  <span class="mx-2">
+                    <i color="#A78736" data-feather="external-link"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="flex justify-around">
+                <div
+                  class="bg-gray-100 flex items-center rounded-md justify-between"
+                >
+                  <span
+                    class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+                  >
+                    1D
+                  </span>
+                  <span
+                    class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+                  >
+                    1W
+                  </span>
+                  <span
+                    class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+                  >
+                    1N
+                  </span>
+                  <span
+                    class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+                  >
+                    1Y
+                  </span>
+                  <span
+                    class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+                  >
+                    1Y
+                  </span>
+                  <span
+                    class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+                  >
+                    1Y
+                  </span>
+                </div>
+                <div
+                  class="border flex justify-between items-center p-2 mx-2 text-black rounded-md border-gray-200"
+                >
+                  Main Balance
+                  <i color="#93949A" data-feather="chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-4 p-4">
+              <apx-chart
+                [series]="series"
+                [chart]="chart"
+                [dataLabels]="dataLabels"
+                [markers]="markers"
+                [title]="title"
+                [fill]="fill"
+                [yaxis]="yaxis"
+                [xaxis]="xaxis"
+                [tooltip]="tooltip"
+                [autoUpdateSeries]="true"
+              ></apx-chart>
+              <div
+                class="border grid grid-cols-1 p-4 border-gray-300 rounded-lg"
+              >
+                <div class="my-2 flex justify-between m-2 items-center">
+                  <div class="block">
+                    <span class="text-sm text-gray-400">Current balance</span>
+                    <h3 class="text-xl my-2 font-bold">$8192232.98</h3>
+                  </div>
+                  <span class="text-custom-tertiary font-medium">View</span>
+                </div>
+                <div #areaChart id="areaChart"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
