@@ -22,6 +22,8 @@ import {
 export class PageNotFoundComponentComponent {
   @ViewChild('chartOne') chartElement!: ElementRef; // Référence au div du graphique
   @ViewChild('areaChart') chartArea!: ElementRef;
+  @ViewChild('areaChart2') chartArea2!: ElementRef;
+
   private chartInstance: any; // Pour stocker l’instance ApexCharts
   private chartInstance2: any;
   public series!: ApexAxisChartSeries;
@@ -42,6 +44,10 @@ export class PageNotFoundComponentComponent {
     
     if(this.chartArea){
       this.chartInstance = areaChart(this.chartArea.nativeElement);
+    }
+
+    if(this.chartArea2){
+      this.chartInstance = areaChart(this.chartArea2.nativeElement);
     }
     this.initChartData();
 
