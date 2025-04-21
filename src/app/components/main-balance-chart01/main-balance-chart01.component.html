@@ -1,0 +1,116 @@
+<div
+class="rounded-xl border my-5 border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]"
+>
+<div class="flex justify-between items-center p-4">
+  <div class="flex justify-around items-center">
+    <div class="block mr-2">
+      <span class="text-sm text-gray-400">Current balance</span>
+      <h3 class="text-xl my-2 font-bold">$8192232.98</h3>
+    </div>
+    <div
+      class="flex mx-2 justify-center items-center bg-green-100 p-1 text-[#2E8D0C]"
+    >
+      <i
+        color="#2E8D0C"
+        width="14px"
+        height="14px"
+        data-feather="arrow-up"
+      ></i>
+      <span>4.28%</span>
+    </div>
+    <span class="font-bold text-2xl text-gray-500">.</span>
+    <div
+      class="flex font-bold items-center text-sm justify-around border text-[#A78736] border-[#A78736] rounded-md mx-2 p-1"
+    >
+      <span class="mx-2">
+        <i color="#A78736" data-feather="arrow-down-circle"></i>
+      </span>
+      <span class="mx-2"> On pending $2398.12 </span>
+      <span class="mx-2">
+        <i color="#A78736" data-feather="external-link"></i>
+      </span>
+    </div>
+  </div>
+  <div class="flex justify-around">
+    <div
+      class="bg-gray-100 flex items-center rounded-md justify-between"
+    >
+      <span
+        class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+      >
+        1D
+      </span>
+      <span
+        class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+      >
+        1W
+      </span>
+      <span
+        class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+      >
+        1N
+      </span>
+      <span
+        class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+      >
+        1Y
+      </span>
+      <span
+        class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+      >
+        1Y
+      </span>
+      <span
+        class="uppercase mx-4 p-2 text-xs text-custom-text hover:bg-white hover:text-black hover:p-4"
+      >
+        1Y
+      </span>
+    </div>
+    <div
+      class="border flex justify-between items-center p-2 mx-2 text-black rounded-md border-gray-200"
+    >
+      Main Balance
+      <i color="#93949A" data-feather="chevron-down"></i>
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
+  <div class="col-span-2">
+    <apx-chart
+      [series]="series"
+      [chart]="chart"
+      [dataLabels]="dataLabels"
+      [markers]="markers"
+      [title]="title"
+      [fill]="fill"
+      [yaxis]="yaxis"
+      [xaxis]="xaxis"
+      [tooltip]="tooltip"
+      [autoUpdateSeries]="true"
+    ></apx-chart>
+  </div>
+
+  <div class="border p-4 border-gray-300 rounded-lg">
+    <div class="border-b">
+      <div class="my-2 flex justify-between m-2 items-center">
+        <div class="block">
+          <span class="text-sm text-gray-400">Current balance</span>
+          <h3 class="text-xl my-2 font-bold">$8192232.98</h3>
+        </div>
+        <span class="text-custom-tertiary font-medium">View</span>
+      </div>
+      <div #areaChart id="areaChart"></div>
+    </div>
+    <div>
+      <div class="my-2 flex justify-between m-2 items-center">
+        <div class="block">
+          <span class="text-sm text-gray-400">Current balance</span>
+          <h3 class="text-xl my-2 font-bold">$8192232.98</h3>
+        </div>
+        <span class="text-custom-tertiary font-medium">View</span>
+      </div>
+      <div #areaChart2 id="areaChart2"></div>
+    </div>
+  </div>
+</div>
+</div>

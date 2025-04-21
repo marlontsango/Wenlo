@@ -28,6 +28,11 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { MainBalanceChart01Component } from './components/main-balance-chart01/main-balance-chart01.component';
+import { MainBalanceChart02Component } from './components/main-balance-chart02/main-balance-chart02.component';
+import { SubscriptionPlanComponent } from './subscription-plan/subscription-plan.component';
+import { MainBalanceComponent } from './main-balance/main-balance.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,12 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     PageNotFoundComponentComponent,
     LoginSideMenuComponent,
     NavBarComponent,
-    SideBarComponent
+    SideBarComponent,
+    MainBalanceChart01Component,
+    MainBalanceChart02Component,
+    SubscriptionPlanComponent,
+    MainBalanceComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

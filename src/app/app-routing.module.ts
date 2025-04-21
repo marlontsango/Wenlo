@@ -9,6 +9,9 @@ import { UserOnboardingComponent } from './user-onboarding/user-onboarding.compo
 import { ChoosePaymentMethodComponent } from './choose-payment-method/choose-payment-method.component';
 import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
+import { SubscriptionPlanComponent } from './subscription-plan/subscription-plan.component';
+import { MainBalanceComponent } from './main-balance/main-balance.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'activate-account', component: ActivateAccountComponent },
@@ -17,8 +20,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'new-password', component: NewPasswordComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'subscription', component: SubscriptionPlanComponent },
   { path: 'onboarding', component: UserOnboardingComponent },
-  { path: 'notFound', component: PageNotFoundComponentComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'main-balance', component: MainBalanceComponent },
   { path: 'choose-payment', component: ChoosePaymentMethodComponent },
   { path: 'pricing', component: PricingPlanComponent },
   { path: '**', component: PageNotFoundComponentComponent },
