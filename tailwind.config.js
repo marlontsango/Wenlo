@@ -13,6 +13,7 @@ module.exports = {
         "custom-title-color": "rgba(38, 40, 63, 1)",
         "custom-circle-color-one": "rgba(57, 73, 161, 1)",
         "custom-circle-color-two": "rgba(57, 161, 145, 1)",
+        "icon-background-color":"rgba(59, 81, 161, 0.1)",
         "custom-mix": "rgba(156, 186, 204, 1)",
       },
     },

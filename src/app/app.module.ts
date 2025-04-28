@@ -33,6 +33,10 @@ import { MainBalanceChart02Component } from './components/main-balance-chart02/m
 import { SubscriptionPlanComponent } from './subscription-plan/subscription-plan.component';
 import { MainBalanceComponent } from './main-balance/main-balance.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Popover } from 'primeng/popover';
+import { InputGroup } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MainBalanceChart02Component,
     SubscriptionPlanComponent,
     MainBalanceComponent,
-    DashboardComponent
+    DashboardComponent,
+    TopUpBilingsComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     IconField,
     InputIcon,
     CommonModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    Popover,
+    InputGroup,
+    InputGroupAddonModule
 
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

@@ -12,6 +12,7 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
 import { SubscriptionPlanComponent } from './subscription-plan/subscription-plan.component';
 import { MainBalanceComponent } from './main-balance/main-balance.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component';
 
 const routes: Routes = [
   { path: 'activate-account', component: ActivateAccountComponent },
@@ -26,6 +27,8 @@ const routes: Routes = [
   { path: 'main-balance', component: MainBalanceComponent },
   { path: 'choose-payment', component: ChoosePaymentMethodComponent },
   { path: 'pricing', component: PricingPlanComponent },
+  { path: 'Top-up', component: TopUpBilingsComponent },
+
   { path: '**', component: PageNotFoundComponentComponent },
 ];
 @NgModule({
