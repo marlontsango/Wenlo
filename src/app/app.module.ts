@@ -37,6 +37,7 @@ import { Popover } from 'primeng/popover';
 import { InputGroup } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -75,8 +76,8 @@ import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component
     NgApexchartsModule,
     Popover,
     InputGroup,
-    InputGroupAddonModule
-
+    InputGroupAddonModule,
+    DialogModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
  bootstrap: [AppComponent],

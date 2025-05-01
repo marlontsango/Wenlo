@@ -7,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrl: './top-up-bilings.component.css'
 })
 export class TopUpBilingsComponent {
+  viewTopUpDialog: boolean = false;
+  downloadDialog: boolean = false;
+  newTopUpDialog: boolean = false;
+
+  showViewDialog(){
+    this.viewTopUpDialog = true;
+  }
+
+  downloadTopUp(){
+    this.downloadDialog = true;
+  }
+
+  OPenTopUpDialog(){
+    this.newTopUpDialog = true;
+  }
 
 }
