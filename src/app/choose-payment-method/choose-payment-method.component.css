@@ -1,11 +1,4 @@
-.p-step:has(~ .p-step-active) .p-stepper-separator {
-    background: #26283F;
-}
 
-.p-divider.p-divider-horizontal::after {
-    border-top: 1px solid #26283F !important;
-}
-
-.p-step:has(~ .p-step-active) .p-stepper-separator {
-    background: rgba(57, 73, 161, 1);
-}
+.p-stepper .p-stepperseparator {
+    background: rgba(57, 73, 161, 1) !important;
+  }

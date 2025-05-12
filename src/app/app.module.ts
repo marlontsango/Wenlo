@@ -38,6 +38,7 @@ import { InputGroup } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component';
 import { DialogModule } from 'primeng/dialog';
+import { BalanceTransfertComponent } from './balance-transfert/balance-transfert.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { DialogModule } from 'primeng/dialog';
     SubscriptionPlanComponent,
     MainBalanceComponent,
     DashboardComponent,
-    TopUpBilingsComponent
+    TopUpBilingsComponent,
+    BalanceTransfertComponent
   ],
   imports: [
     BrowserModule,

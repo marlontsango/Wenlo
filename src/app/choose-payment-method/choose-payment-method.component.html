@@ -35,7 +35,7 @@
 
         <p-stepper [(value)]="activeStep" class="basis-[40rem] mt-10">
           <p-step-list>
-            <p-step [value]="1" class="flex flex-row flex-auto gap-2">
+            <p-step [value]="1" class="flex flex-row flex-auto gap-2 [&_.p-stepperseparator]:bg-red-500">
               <ng-template
                 #content
                 let-activateCallback="activateCallback"

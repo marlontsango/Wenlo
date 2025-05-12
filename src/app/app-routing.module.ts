@@ -13,6 +13,7 @@ import { SubscriptionPlanComponent } from './subscription-plan/subscription-plan
 import { MainBalanceComponent } from './main-balance/main-balance.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component';
+import { BalanceTransfertComponent } from './balance-transfert/balance-transfert.component';
 
 const routes: Routes = [
   { path: 'activate-account', component: ActivateAccountComponent },
@@ -28,6 +29,8 @@ const routes: Routes = [
   { path: 'choose-payment', component: ChoosePaymentMethodComponent },
   { path: 'pricing', component: PricingPlanComponent },
   { path: 'Top-up', component: TopUpBilingsComponent },
+  { path: 'balance-transfert', component: BalanceTransfertComponent },
+
 
   { path: '**', component: PageNotFoundComponentComponent },
 ];
