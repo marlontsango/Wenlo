@@ -39,6 +39,10 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { TopUpBilingsComponent } from './top-up-bilings/top-up-bilings.component';
 import { DialogModule } from 'primeng/dialog';
 import { BalanceTransfertComponent } from './balance-transfert/balance-transfert.component';
+import { FacebookAdAccountComponent } from './facebook-ad-account/facebook-ad-account.component';
+import { GoogleAdAccountComponent } from './google-ad-account/google-ad-account.component';
+import { ManageAdAccountAccessComponent } from './manage-ad-account-access/manage-ad-account-access.component';
+import { PeopleComponent } from './people/people.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,11 @@ import { BalanceTransfertComponent } from './balance-transfert/balance-transfert
     MainBalanceComponent,
     DashboardComponent,
     TopUpBilingsComponent,
-    BalanceTransfertComponent
+    BalanceTransfertComponent,
+    FacebookAdAccountComponent,
+    GoogleAdAccountComponent,
+    ManageAdAccountAccessComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,

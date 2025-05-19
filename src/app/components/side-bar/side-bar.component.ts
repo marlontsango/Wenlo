@@ -12,11 +12,12 @@ export class SideBarComponent {
 sidebarToggle: boolean;
 $buttonElement = document.querySelector('#button');
 $modalElement = document.querySelector('#default-sidebar');
-
+canCollapse: boolean;
 
 
   constructor(){
     this.sidebarToggle = false;
+    this.canCollapse = false;
   }
   ngAfterViewInit() {
     feather.replace();
@@ -24,5 +25,11 @@ $modalElement = document.querySelector('#default-sidebar');
 
   toggleSidebar() {
     this.sidebarToggle = !this.sidebarToggle;
+  }
+
+  dropDownMenu(){
+    console.log('can collpase', this.canCollapse);
+    this.canCollapse = !this.canCollapse;
+
   }
 }

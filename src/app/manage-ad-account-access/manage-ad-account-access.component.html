@@ -1,0 +1,1163 @@
+<div class="flex h-screen overflow-hidden">
+  <!-- ===== Sidebar Start ===== -->
+  <app-side-bar class="bg-white"></app-side-bar>
+  <!-- ===== Sidebar End ===== -->
+  <div class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
+    <!-- ===== Header Start ===== -->
+    <app-nav-bar></app-nav-bar>
+    <!-- ===== Header End ===== -->
+    <main>
+      <!-- ===== BreadCrumb start ===== -->
+
+      <nav class="flex m-6 pb-5 border-b" aria-label="Breadcrumb">
+        <ol
+          class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+        >
+          <li class="inline-flex items-center">
+            <a
+              href="#"
+              class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+            >
+              Wenlo
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <svg
+                class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <a
+                href="#"
+                class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                >Manage Ad Account Access</a
+              >
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <div class="px-4 flex justify-between items-center md:px-6">
+        <h1 class="font-normal text-2xl text-custom-primary">
+          Manage Ad Account Access
+        </h1>
+        <button
+          (click)="oPenTopUpDialog()"
+          type="button"
+          class="text-white bg-custom-tertiary hover:bg-indigo-900 border border-indigo-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+        >
+          Request for access
+        </button>
+        <!--         <p-dialog
+          header="Request summary"
+          [modal]="true"
+          [(visible)]="newTopUpDialog"
+          [style]="{ width: '40rem', border: '1px, solid gray' }"
+          [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+        >
+          <div class="flex items-center mb-5">
+            <span class="text-blue-700 mr-2">#8FB28438-001</span>
+            <span
+              class="text-green-700 bg-green-100 p-1 border border-green-500 rounded-md font-xs text-xs"
+              >On review</span
+            >
+          </div>
+
+          <div class="pt-4 border-t">
+            <div class="mb-2">
+              <label for="wenlo" class="block text-sm/6 font-medium"
+                >Ad account to top-up <span class="text-red-500">*</span></label
+              >
+              <div class="mt-2 grid grid-cols-1">
+                <select
+                  id="wenlo"
+                  name="wenlo"
+                  class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                >
+                  <option>Forums comments</option>
+                  <option>Social media</option>
+                  <option>Others</option>
+                </select>
+                <svg
+                  class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="border rounded-lg mt-4 space-y-2">
+              <div class="flex items-center border-b space-y-2 rounded-md">
+                <img
+                  src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                  class="h-8 w-8 mx-2"
+                  alt="img1"
+                />
+                <span class="ml-2 p-2">
+                  <p
+                    class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                  >
+                    ID: 64272
+                  </p>
+                  <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+                </span>
+              </div>
+              <div class="flex items-center border-b space-y-2 rounded-md">
+                <img
+                  src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                  class="h-8 w-8 mx-2"
+                  alt="img1"
+                />
+                <span class="ml-2 p-2">
+                  <p
+                    class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                  >
+                    ID: 64272
+                  </p>
+                  <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+                </span>
+              </div>
+              <div class="flex items-center space-y-2 rounded-md">
+                <img
+                  src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                  class="h-8 w-8 mx-2"
+                  alt="img1"
+                />
+                <span class="ml-2 p-2">
+                  <p
+                    class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                  >
+                    ID: 64272
+                  </p>
+                  <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="border-b pb-5">
+            <div class="mt-5 p-4 space-y-2 border rounded-lg">
+              <div class="flex justify-between items-center">
+                <label class="font-semibold text-custom-text"
+                  >Balance<span class="text-red">*</span></label
+                >
+                <span class="text-black">$300</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <label class="font-semibold text-custom-text"
+                  >Amount to debit<span class="text-red">*</span></label
+                >
+                <span class="text-black">-$100</span>
+              </div>
+            </div>
+
+            <div class="sm:col-span-6 mt-5">
+              <label for="new-password" class="block text-sm/6 font-medium"
+                >Top-up amount($)</label
+              >
+              <div class="flex mt-2">
+                <input
+                  type="text"
+                  placeholder="100$"
+                  name="first-name"
+                  id="first-name"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base border border-gray-300 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+            <div class="flex justify-around mt-4 border-b pb-4 items-center">
+              <span
+                class="p-2 border px-4 rounded-md text-black font-medium text-sm hover:border-custom-tertiary hover:text-custom-tertiary"
+              >
+                $30
+              </span>
+              <span
+                class="p-2 px-4 border rounded-md text-black font-medium text-sm hover:border-custom-tertiary hover:text-custom-tertiary"
+              >
+                $100
+              </span>
+              <span
+                class="p-2 px-4 border rounded-md text-black font-medium text-sm hover:border-custom-tertiary hover:text-custom-tertiary"
+              >
+                $200
+              </span>
+              <span
+                class="p-2 px-4 border rounded-md text-black font-medium text-sm hover:border-custom-tertiary hover:text-custom-tertiary"
+              >
+                $500
+              </span>
+            </div>
+            <div
+              class="flex items-center justify-between border-b mb-8 mt-4 pb-4"
+            >
+              <label class="font-semibold text-custom-text"
+                >Top-up amount ($)<span class="text-red">*</span></label
+              >
+              <span class="text-black">$100</span>
+            </div>
+            <div class="flex items-center justify-between mt-8 pb-4">
+              <label class="font-semibold text-custom-text"
+                >Top-up Fee<span class="text-red">*</span></label
+              >
+              <span class="text-black">$4,49</span>
+            </div>
+            <div class="flex items-center justify-between mt-2 pb-4">
+              <label class="font-semibold text-custom-text"
+                >VAT<span class="text-red">*</span></label
+              >
+              <span class="text-black">$4,49</span>
+            </div>
+            <div class="flex items-center justify-between mt-2 pb-4">
+              <label class="font-semibold text-custom-title-color"
+                >Amount DUE<span class="text-red">*</span></label
+              >
+              <span class="text-black">$20.48</span>
+            </div>
+          </div>
+          <div class="flex justify-between mt-4">
+            <div class="flex justify-around">
+              <button
+                type="button"
+                class="text-white bg-custom-primary hover:bg-slate-900 border border-slate-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+              >
+                save as draft
+              </button>
+              <button
+                (click)="downloadDialog = false"
+                type="button"
+                class="text-custom-title-color bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+              >
+                cancel
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="text-white bg-custom-tertiary hover:bg-indigo-900 border border-indigo-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+              >
+                <i
+                  class="pi pi-download"
+                  style="color: white; margin-right: 8px"
+                ></i>
+                Download PDF
+              </button>
+            </div>
+          </div>
+        </p-dialog> -->
+      </div>
+      <p-dialog
+        header="Manage ad account access"
+        [modal]="true"
+        [(visible)]="newTopUpDialog"
+        [style]="{ width: '40rem', border: '1px, solid gray' }"
+        [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+      >
+
+        <div>
+        <div class="mx-2">
+            <label for="addd" class="block text-sm/6 font-medium"
+            >Business Account or Profile<span class="text-red-500">*</span></label
+        >
+        <div class="mt-2 grid grid-cols-1">
+            <select
+            id="wenlo"
+            name="wenlo"
+            class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+            >
+            <option>Select business account or profile</option>
+            <option>Account a</option>
+            <option>Account b</option>
+            </select>
+            <svg
+            class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+            >
+            <path
+                fill-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+            />
+            </svg>
+        </div>
+        </div>
+
+          <div class="border rounded-lg mt-4 mx-2 space-y-2">
+            <div class="flex items-center border-b space-y-2 rounded-md">
+              <img
+                src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                class="h-8 w-8 mx-2"
+                alt="img1"
+              />
+              <span class="ml-2 p-2">
+                <p
+                  class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                >
+                  ID: 64272
+                </p>
+                <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+              </span>
+            </div>
+            <div class="flex items-center border-b space-y-2 rounded-md">
+              <img
+                src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                class="h-8 w-8 mx-2"
+                alt="img1"
+              />
+              <span class="ml-2 p-2">
+                <p
+                  class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                >
+                  ID: 64272
+                </p>
+                <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+              </span>
+            </div>
+            <div class="flex items-center space-y-2 rounded-md">
+              <img
+                src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                class="h-8 w-8 mx-2"
+                alt="img1"
+              />
+              <span class="ml-2 p-2">
+                <p
+                  class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                >
+                  ID: 64272
+                </p>
+                <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+              </span>
+            </div>
+            <div>
+            </div>
+            
+          </div>
+          <div class="m-2">
+            <button
+              type="button"
+              class="text-custom-tertiary w-full  justify-around  bg-white hover:bg-indigo-900 hover:text-white border border-indigo-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+            >
+            <span>
+                            
+                <i class="pi pi-plus mr-4 text-custom-tertiary hover:text-white" ></i>
+
+              Ad Account
+            </span>
+
+            </button>
+          </div>
+                  <div class="mx-2">
+            <label for="addd" class="block text-sm/6 font-medium"
+            >Ad account to access</label
+        >
+        <div class="mt-2 grid grid-cols-1">
+            <select
+            id="wenlo"
+            name="wenlo"
+            class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+            >
+            <option>Select ad account to get access</option>
+            <option>Account a</option>
+            <option>Account b</option>
+            </select>
+            <svg
+            class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+            >
+            <path
+                fill-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+            />
+            </svg>
+        </div>
+        </div>
+        </div>
+
+        <div class="flex justify-end mt-4">
+            <div>
+              <button
+                (click)="newTopUpDialog = false"
+                type="button"
+                class="text-custom-title-color bg-white hover:bg-gray-200 border-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+              >
+                cancel
+              </button>
+            </div>
+          <div>
+            <button
+              type="button"
+              class="text-white bg-custom-tertiary hover:bg-indigo-900 border border-indigo-800  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </p-dialog>
+
+      <div class="col-span-12 m-6 space-y-4">
+        <div
+          class="overflow-hidden rounded-2xl border border-gray-200 bg-white px-4 pb-3 pt-4 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6"
+        >
+          <div
+            class="flex flex-col gap-2 mb-4 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <div>
+              <form class="max-w-md mx-auto">
+                <label
+                  for="default-search"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                  >Search</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search "
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div
+                class="flex items-center justify-around border rounded-md border-gray-300 p-2"
+              >
+                <span class="mx-2 text-custom-primary">
+                  01 Mar 2023 - 31 Mar 2023
+                </span>
+                <i color="#3949A1" data-feather="calendar"></i>
+              </div>
+              <div>
+                <form class="max-w-sm mx-auto">
+                  <select
+                    id="status"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option selected>All status</option>
+                    <option value="CL">close</option>
+                    <option value="OP">Open</option>
+                    <option value="DR">Draft</option>
+                  </select>
+                </form>
+              </div>
+              <div>
+                <form class="max-w-sm mx-auto">
+                  <select
+                    id="status"
+                    class="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option selected>Select Payment Method</option>
+                    <option value="momo">Mobile Money</option>
+                    <option value="Om">Orange Money</option>
+                    <option value="pp">Paypal</option>
+                  </select>
+                </form>
+              </div>
+
+              <button
+                type="button"
+                class="text-white bg-custom-tertiary hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+
+          <div class="w-full overflow-x-auto">
+            <table class="min-w-full">
+              <!-- table header start -->
+              <thead>
+                <tr class="border-gray-100 border-y dark:border-gray-800">
+                  <th class="py-3">
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Request ID
+                      </p>
+                    </div>
+                  </th>
+                  <th class="py-3">
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Date & Hours
+                      </p>
+                    </div>
+                  </th>
+                  <th class="py-3">
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Ad Account
+                      </p>
+                    </div>
+                  </th>
+                  <th class="py-3">
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Linking
+                      </p>
+                    </div>
+                  </th>
+
+                  <th class="py-3">
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Business & People
+                      </p>
+                    </div>
+                  </th>
+                  <th class="py-3">
+                    <div class="flex items-center col-span-2">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Status
+                      </p>
+                    </div>
+                  </th>
+                  <th class="py-5">
+                    <div class="flex items-center col-span-2">
+                      <p
+                        class="font-medium text-gray-500 text-theme-xs dark:text-gray-400"
+                      >
+                        Actions
+                      </p>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <!-- table header end -->
+
+              <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+                <tr>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <p class="text-black text-theme-sm dark:text-gray-400">
+                        3424121248AR
+                      </p>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="items-center">
+                      <p
+                        class="text-custom-primary text-theme-sm dark:text-gray-400"
+                      >
+                        April 26, 2023
+                      </p>
+                      <span class="text-custom-secondary text-sm"
+                        >10:30 AM</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <span class="text-custom-secondary text-sm"
+                          >ID: 644257</span
+                        >
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          Gabrieala Hudges
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <i
+                        class="pi pi-link text-custom-primary"
+                        style="font-size: 1rem"
+                      ></i>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          April 26, 2023
+                        </p>
+                        <span class="text-custom-secondary text-sm"
+                          >10:30 AM</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <span
+                        class="text-green-700 font-medium py-2 px-4 m-2 rounded-md bg-green-100 hover:bg-green-300"
+                      >
+                        Done
+                      </span>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <button
+                        (click)="showViewDialog()"
+                        type="button"
+                        class="text-custom-text bg-white border border-x-custom-secondary hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- table item -->
+                <tr>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <p class="text-black text-theme-sm dark:text-gray-400">
+                        3424121248AR
+                      </p>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="items-center">
+                      <p
+                        class="text-custom-primary text-theme-sm dark:text-gray-400"
+                      >
+                        April 26, 2023
+                      </p>
+                      <span class="text-custom-secondary text-sm"
+                        >10:30 AM</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <span class="text-custom-secondary text-sm"
+                          >ID: 644257</span
+                        >
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          Gabrieala Hudges
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <i
+                        class="pi pi-link text-custom-primary"
+                        style="font-size: 1rem"
+                      ></i>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/google-icon-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          April 26, 2023
+                        </p>
+                        <span class="text-custom-secondary text-sm"
+                          >10:30 AM</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <span
+                        class="text-yellow-700 font-medium py-2 px-4 m-2 rounded-md bg-yellow-100 hover:bg-yellow-300"
+                      >
+                        On pending
+                      </span>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        class="text-custom-text bg-white border border-x-custom-secondary hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- table item -->
+                <tr>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <p class="text-black text-theme-sm dark:text-gray-400">
+                        3424121248AR
+                      </p>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="items-center">
+                      <p
+                        class="text-custom-primary text-theme-sm dark:text-gray-400"
+                      >
+                        April 26, 2023
+                      </p>
+                      <span class="text-custom-secondary text-sm"
+                        >10:30 AM</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <span class="text-custom-secondary text-sm"
+                          >ID: 644257</span
+                        >
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          Gabrieala Hudges
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <i
+                        class="pi pi-link text-custom-primary"
+                        style="font-size: 1rem"
+                      ></i>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="/assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          April 26, 2023
+                        </p>
+                        <span class="text-custom-secondary text-sm"
+                          >10:30 AM</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <span
+                        class="text-red-700 font-medium py-2 px-4 m-2 rounded-md bg-red-100 hover:bg-red-300"
+                      >
+                        Failed
+                      </span>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        class="text-custom-text bg-white border border-x-custom-secondary hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- table item -->
+                <tr>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <p class="text-black text-theme-sm dark:text-gray-400">
+                        3424121248AR
+                      </p>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="items-center">
+                      <p
+                        class="text-custom-primary text-theme-sm dark:text-gray-400"
+                      >
+                        April 26, 2023
+                      </p>
+                      <span class="text-custom-secondary text-sm"
+                        >10:30 AM</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <span class="text-custom-secondary text-sm"
+                          >ID: 644257</span
+                        >
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          Gabrieala Hudges
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <i
+                        class="pi pi-link text-custom-primary"
+                        style="font-size: 1rem"
+                      ></i>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/instagram-2-1-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          April 26, 2023
+                        </p>
+                        <span class="text-custom-secondary text-sm"
+                          >10:30 AM</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <span
+                        class="text-green-700 font-medium py-2 px-4 m-2 rounded-md bg-green-100 hover:bg-green-300"
+                      >
+                        Done
+                      </span>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        class="text-custom-text bg-white border border-x-custom-secondary hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- table item -->
+                <tr>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <p class="text-black text-theme-sm dark:text-gray-400">
+                        3424121248AR
+                      </p>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="items-center">
+                      <p
+                        class="text-custom-primary text-theme-sm dark:text-gray-400"
+                      >
+                        April 26, 2023
+                      </p>
+                      <span class="text-custom-secondary text-sm"
+                        >10:30 AM</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <span class="text-custom-secondary text-sm"
+                          >ID: 644257</span
+                        >
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          Gabrieala Hudges
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <i
+                        class="pi pi-link text-custom-primary"
+                        style="font-size: 1rem"
+                      ></i>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <div>
+                        <img
+                          src="assets/icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+                          class="h-8 w-8 mx-2"
+                          alt="img1"
+                        />
+                      </div>
+                      <div class="items-center">
+                        <p
+                          class="text-custom-primary text-theme-sm dark:text-gray-400"
+                        >
+                          April 26, 2023
+                        </p>
+                        <span class="text-custom-secondary text-sm"
+                          >10:30 AM</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <span
+                        class="text-green-700 font-medium py-2 px-4 m-2 rounded-md bg-green-100 hover:bg-green-300"
+                      >
+                        Done
+                      </span>
+                    </div>
+                  </td>
+
+                  <td class="py-5">
+                    <div class="flex items-center">
+                      <button
+                      (click)="showViewDialog()"
+                        type="button"
+                        class="text-custom-text bg-white border border-x-custom-secondary hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- table body end -->
+              </tbody>
+            </table>
+                        <!-- success dialog start -->
+            <div class="card flex justify-center">
+              <p-dialog
+                header="Manage Balance Transfert"
+                [modal]="true"
+                [(visible)]="viewTopUpDialog"
+                [style]="{ width: '45rem' }"
+              >
+                <div class="flex items-center pb-4 border-b-2">
+                  <span class="text-indigo-700 mr-2">#34658937374AR</span>
+                  <span
+                    class="bg-green-100 p-1 text-green-700 rounded-md border border-green-600"
+                    >Done</span
+                  >
+                </div>
+                <div class="flex items-center justify-between border-b mt-2 space-y-2 rounded-md">
+                  <div>
+                    <span class="text-xl text-custom-primary font-bold">
+                      Ad account access Request
+                    </span>
+                    <p class="text-base text-custom-secondary font-semibold mt-2">
+                      Your ad account access request summary
+                    </p>
+
+                  </div>
+                  <div class="w-[40%]">
+                    <div class="flex justify-between items-center m-2">
+                      <span class="text-sm text-custom-secondary font-semibold">Date</span>
+                      <span class="text-sm text-custom-primary font-semibold">April,2023</span>
+                    </div>
+                    <div class="flex justify-between items-center m-2">
+                      <span class="text-sm text-custom-secondary font-semibold">Hours</span>
+                      <span class="text-sm text-custom-primary font-semibold">10.30 am</span>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="flex justify-between py-2 items-center">
+                  <div
+                  class="m-2 "
+                  >
+                    <label class="font-semibold text-custom-text my-4">Add account </label
+                    >
+                    <div class="flex justify-start items-center border mt-2 px-4 py-2 rounded-lg">
+                      <span>
+                        <img
+                          src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                          class="h-8 w-8"
+                          alt="img1"
+                        />
+                      </span>
+                      <span class="ml-4">
+                        <p
+                          class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                        >
+                          ID: 64272
+                        </p>
+                        <p class="text-custom-primary">Gabriela Hudges</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="relative top-4">
+                    <i class="pi pi-link" style="font-size: 2rem"></i>
+                  </div>
+                  <div
+                  class="m-2 "
+                  >
+                    <label class="font-semibold text-custom-text my-4">Business & People</label
+                    >
+                    <div class="flex justify-start border px-4 py-2 mt-2 rounded-lg items-center">
+                      <span>
+                        <img
+                          src="assets/icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+                          class="h-8 w-8"
+                          alt="img1"
+                        />
+                      </span>
+                      <span class="ml-4">
+                                                
+                        <p class="text-custom-primary">James Arthur</p>
+                        <p
+                          class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                        >
+                          ID: 3476252
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+
+              </p-dialog>
+            </div>
+            <!-- success dialog end -->
+            <!-- view top up start -->
+
+            <!-- view top up end -->
+
+            <!-- download top up start -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
