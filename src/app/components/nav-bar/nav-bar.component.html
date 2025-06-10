@@ -147,6 +147,7 @@
 
         <div class="header-element flex relative justify-items-center right-0">
           <button
+            (click)="openProfil()"
             id="droptown-profile"
             type="button"
             class="hs-dropdown-toggle ti-dropdown-toggle !gap-2 !p-0 flex-shrink-0 sm:me-2 me-0 !rounded-full !shadow-none text-xs align-middle !border-0 !shadow-transparent"
@@ -159,6 +160,24 @@
               src="assets/images/Astronaut.svg"
             />
           </button>
+          <p-popover #profil>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-start">
+                <i class="pi pi-user" style="color: #93949A"></i>
+                <span class="text-custom-text font-semibold mx-4">My Profile</span>
+              </div>
+              <div class="flex items-center justify-start border-b pb-2">
+                <i class="pi pi-lock" style="color: #93949A"></i>
+                <span class="text-custom-text font-semibold mx-4">Change Password</span>
+              </div>
+              <div class="flex items-center justify-start ">
+                <i class="pi pi-sign-out" style="color: #93949A"></i>
+                <span class="text-custom-text  font-semibold mx-4">Logout</span>
+              </div>
+
+            </div>
+
+          </p-popover>
           <div class="md:block dropdown-profile">
             <p class="font-medium mb-1 leading-none text-gray-400 text-sm">
               Kasper Marlon

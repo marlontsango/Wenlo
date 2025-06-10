@@ -2,12 +2,12 @@
   <!-- ===== Sidebar Start ===== -->
   <app-side-bar class="bg-white"></app-side-bar>
   <!-- ===== Sidebar End ===== -->
-   <div class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
+  <div class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
     <!-- ===== Header Start ===== -->
     <app-nav-bar></app-nav-bar>
     <!-- ===== Header End ===== -->
-     <main>
-              <!-- ===== BreadCrumb start ===== -->
+    <main>
+      <!-- ===== BreadCrumb start ===== -->
 
       <nav class="flex m-6 pb-5 border-b" aria-label="Breadcrumb">
         <ol
@@ -52,8 +52,326 @@
         <h1 class="font-normal text-2xl text-custom-primary">
           Manage People & Business Accounts
         </h1>
-
       </div>
-     </main>
-   </div>
+
+      <!-- ===== main block start ===== -->
+      <div class="grid grid-cols-2 gap-4 m-4">
+        <div class="border bg-white rounded-md">
+          <div class="flex justify-between items-center p-2">
+            <form class="flex items-center mx-2 p-2">
+              <label for="simple-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                >
+                  <i class="pi pi-search text-custom-primary"></i>
+                </div>
+                <input
+                  type="text"
+                  id="simple-search"
+                  class="bg-gray-50 border border-gray-300 text-custom-secondary text-sm rounded-lg focus:ring-custom-tertiary focus:border-custom-tertiary block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-custom-tertiary dark:focus:border-custom-tertiary"
+                  placeholder="Search"
+                  required
+                />
+              </div>
+            </form>
+            <button
+              (click)="oPenAddAccountDialog()"
+              type="button"
+              class="text-white bg-custom-tertiary hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              <i class="pi pi-plus" style="color: white"></i>
+              Add Accounts
+            </button>
+          </div>
+
+          <p-dialog
+            header="Add yours business assets details"
+            [modal]="true"
+            [(visible)]="isAddAccountOpen"
+            [style]="{ width: '40rem', border: '1px, solid gray' }"
+            [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+          >
+            <div>
+              <div class="mx-2">
+                <label for="addd" class="block text-sm/6 font-medium"
+                  >Netword/Platform<span class="text-red-500">*</span></label
+                >
+                <div class="mt-2 grid grid-cols-1">
+                  <select
+                    id="wenlo"
+                    name="wenlo"
+                    class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  >
+                    <option>Select the network/platform</option>
+                    <option>network 1</option>
+                    <option>network 2</option>
+                  </select>
+                  <svg
+                    class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                (click)="openDetail($event)"
+                class="flex justify-between items-center bg-gray-100 rounded-lg mt-4 p-2 mx-2"
+              >
+                <div class="flex items-center">
+                  <span class="mx-2">
+                    <i
+                      class="pi pi-facebook text-custom-tertiary"
+                      style="font-size: 2rem"
+                    ></i>
+                  </span>
+                  <p
+                    class="text-custom-primary mx-2 text-theme-sm dark:text-gray-400"
+                  >
+                    Facebook
+                  </p>
+                </div>
+                <div
+                  class="border rounded-full mx-4 border-gray-300 w-5 h-5"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between items-center bg-gray-100 rounded-lg mt-4 p-2 mx-2"
+              >
+                <div class="flex items-center">
+                  <span class="mx-2">
+                    <img
+                      src="assets/icons/google-icon-logo-svgrepo-com.svg"
+                      class="h-8 w-8"
+                      alt="img1"
+                    />
+                  </span>
+                  <p
+                    class="text-custom-primary mx-2 text-theme-sm dark:text-gray-400"
+                  >
+                    Google
+                  </p>
+                </div>
+                <div
+                  class="border rounded-full mx-4 border-gray-300 w-5 h-5"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between items-center bg-gray-100 rounded-lg mt-4 p-2 mx-2"
+              >
+                <div class="flex items-center">
+                  <span class="mx-2">
+                    <img
+                      src="assets/icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+                      class="h-8 w-8"
+                      alt="img1"
+                    />
+                  </span>
+                  <p
+                    class="text-custom-primary mx-2 text-theme-sm dark:text-gray-400"
+                  >
+                    TikTok
+                  </p>
+                </div>
+                <div
+                  class="border rounded-full mx-4 border-gray-300 w-5 h-5"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between items-center bg-gray-100 rounded-lg mt-4 p-2 mx-2"
+              >
+                <div class="flex items-center">
+                  <span class="mx-2">
+                    <img
+                      src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                      class="h-8 w-8"
+                      alt="img1"
+                    />
+                  </span>
+                  <p
+                    class="text-custom-primary mx-2 text-theme-sm dark:text-gray-400"
+                  >
+                    Snapchat
+                  </p>
+                </div>
+                <div
+                  class="border rounded-full mx-4 border-gray-300 w-5 h-5"
+                ></div>
+              </div>
+              <p-popover #op>
+                <ng-template #content>
+                  <app-add-business-assets-details>
+                  </app-add-business-assets-details>
+
+                  <div class="flex justify-end mt-4">
+                    <div>
+                      <button
+                        (click)="hidePopover()"
+                        type="button"
+                        class="text-custom-title-color border bg-white hover:bg-gray-200 border-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        cancel
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        class="text-white bg-custom-tertiary hover:bg-indigo-900 border border-indigo-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </ng-template>
+              </p-popover>
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <div>
+                <button
+                  (click)="isAddAccountOpen = false"
+                  type="button"
+                  class="text-custom-title-color border bg-white hover:bg-gray-200 border-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                >
+                  cancel
+                </button>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="text-white bg-custom-tertiary hover:bg-indigo-900 border border-indigo-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </p-dialog>
+
+          <div class="flex items-center border-b space-y-2 m-2 rounded-md">
+            <img
+              src="assets/icons/snapchat-logo-svgrepo-com.svg"
+              class="h-8 w-8 mx-2"
+              alt="img1"
+            />
+            <span class="ml-2 p-2">
+              <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+              <p class="text-custom-secondary text-theme-sm dark:text-gray-400">
+                ID: 64272
+              </p>
+            </span>
+          </div>
+          <div class="flex items-center border-b space-y-2 m-2 rounded-md">
+            <img
+              src="assets/icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+              class="h-8 w-8 mx-2"
+              alt="img1"
+            />
+            <span class="ml-2 p-2">
+              <p class="text-custom-primary mt-2">James Athur</p>
+              <p class="text-custom-secondary text-theme-sm dark:text-gray-400">
+                ID: 40972
+              </p>
+            </span>
+          </div>
+          <div class="flex items-center border-b space-y-2 rounded-md">
+            <img
+              src="assets/icons/snapchat-logo-svgrepo-com.svg"
+              class="h-8 w-8 mx-2"
+              alt="img1"
+            />
+            <span class="ml-2 p-2">
+              <p class="text-custom-primary mt-2">Moniqua brown</p>
+              <p class="text-custom-secondary text-theme-sm dark:text-gray-400">
+                ID: 64272
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="border bg-white rounded-md">
+          <div
+            class="flex items-center justify-between border-b space-y-2 m-2 rounded-md"
+          >
+            <div class="flex items-center">
+              <img
+                src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                class="h-8 w-8 mx-2"
+                alt="img1"
+              />
+              <span class="ml-2 p-2">
+                <p class="text-custom-primary mt-2">Gabriela Hudges</p>
+                <p
+                  class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                >
+                  ID: 64272
+                </p>
+              </span>
+            </div>
+            <div class="px-4 py-2 bg-red-50 rounded-md mx-2 items-center">
+              <h3 class="text-red-600 font-medium text-sm">Remove</h3>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mx-2 p-2">
+            <h2 class="text-lg font-bold text-custom-title-color">
+              Linked ad accounts
+            </h2>
+            <div class="px-4 py-2 bg-indigo-50 rounded-md items-center">
+              <h3 class="text-custom-tertiary font-medium text-sm">
+                Link ad account
+              </h3>
+            </div>
+          </div>
+          <div class="mx-2 p-2">
+            <p class="text-sm font-normal text-custom-secondary">
+              Here are the assets that this account can access and manage
+            </p>
+          </div>
+          <form class="flex items-center mx-2 p-2">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative w-full">
+              <div
+                class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none"
+              >
+                <i class="pi pi-search text-custom-primary"></i>
+              </div>
+              <input
+                type="text"
+                id="simple-search"
+                class="bg-gray-50 border border-gray-300 text-custom-secondary text-sm rounded-lg focus:ring-custom-tertiary focus:border-custom-tertiary block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-custom-tertiary dark:focus:border-custom-tertiary"
+                placeholder="Search by ID or name"
+                required
+              />
+            </div>
+          </form>
+          <div class="m-2 p-2">
+            <label class="text-custom-secondary"
+              >Add accounts <span class="text-red-600">*</span></label
+            >
+            <div class="flex items-center border mt-2 rounded-md">
+              <img
+                src="assets/icons/snapchat-logo-svgrepo-com.svg"
+                class="h-8 w-8 mx-2"
+                alt="img1"
+              />
+              <span class="ml-2 px-2">
+                <p class="text-custom-primary mt-2">Moniqua brown</p>
+                <p
+                  class="text-custom-secondary text-theme-sm dark:text-gray-400"
+                >
+                  ID: 64272
+                </p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>

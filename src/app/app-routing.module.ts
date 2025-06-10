@@ -18,6 +18,7 @@ import { FacebookAdAccountComponent } from './facebook-ad-account/facebook-ad-ac
 import { GoogleAdAccountComponent } from './google-ad-account/google-ad-account.component';
 import { ManageAdAccountAccessComponent } from './manage-ad-account-access/manage-ad-account-access.component';
 import { PeopleComponent } from './people/people.component';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
   { path: 'activate-account', component: ActivateAccountComponent },
@@ -37,8 +38,8 @@ const routes: Routes = [
   { path: 'google', component: GoogleAdAccountComponent },
   { path: 'manage-account-access', component: ManageAdAccountAccessComponent },
   { path: 'people-business', component: PeopleComponent },
-
-
+  { path: 'withdraw', component: PeopleComponent },
+  { path: 'profil', component: ProfilComponent },
   { path: 'balance-transfert', component: BalanceTransfertComponent },
 
   { path: '**', component: PageNotFoundComponentComponent },

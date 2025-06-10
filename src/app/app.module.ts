@@ -43,6 +43,11 @@ import { FacebookAdAccountComponent } from './facebook-ad-account/facebook-ad-ac
 import { GoogleAdAccountComponent } from './google-ad-account/google-ad-account.component';
 import { ManageAdAccountAccessComponent } from './manage-ad-account-access/manage-ad-account-access.component';
 import { PeopleComponent } from './people/people.component';
+import { DepositComponent } from './deposit/deposit.component';
+import { WithdrawalComponent } from './withdrawal/withdrawal.component';
+import { AddBusinessAssetsDetailsComponent } from './components/add-business-assets-details/add-business-assets-details.component';
+import { ProfilComponent } from './profil/profil.component';
+import { EditProfilComponent } from './components/edit-profil/edit-profil.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +74,12 @@ import { PeopleComponent } from './people/people.component';
     FacebookAdAccountComponent,
     GoogleAdAccountComponent,
     ManageAdAccountAccessComponent,
-    PeopleComponent
+    PeopleComponent,
+    DepositComponent,
+    WithdrawalComponent,
+    AddBusinessAssetsDetailsComponent,
+    ProfilComponent,
+    EditProfilComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ import { Popover } from 'primeng/popover';
 })
 export class NavBarComponent {
   @ViewChild('op') op!: Popover;
+  @ViewChild('profil') profil!: Popover;
+
 
   sidebarToggle: boolean;
   menuToggle: boolean;
@@ -33,6 +35,13 @@ export class NavBarComponent {
     if (this.op.container) {
       this.op.align();
     }
+  }
+
+  openProfil(){
+    this.profil.show(event);
+  }
+  hideProfil(){
+    this.profil.hide();
   }
 
   hidePopover() {
